@@ -569,7 +569,7 @@ def interactive_simulation():
                             encoded_hypothesis = encoded_hypothesis.split()
                             hypothesis = encoded_hypothesis
                             for (words_idx, starting_pos), words in unk_in_isles:
-                                for pos_unk_word, pos_hypothesis in enumerate(range(starting_pos, starting_pos + len(words_idx))):
+                                for pos_unk_word, pos_hypothesis in enumerate(range(starting_pos, starting_pos + len(list(words_idx)))):
                                     hypothesis[pos_hypothesis] = words[pos_unk_word]
 
                             hypothesis_number += 1
